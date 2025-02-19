@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
-  <meta name="author" content="Беличева Д. М.">
-  <title>Лабораторная работа 1</title>
+  <meta name="author" content="Горяйнова АА">
+  <title>Лабораторная работа 2</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -33,9 +33,10 @@
     <div class="slides">
 
 <section id="title-slide">
-  <h1 class="title">Лабораторная работа 1</h1>
-  <p class="subtitle">Простые модели компьютерной сети</p>
-  <p class="author">Беличева Д. М.</p>
+  <h1 class="title">Лабораторная работа 2</h1>
+  <p class="subtitle">Исследование протокола TCP и алгоритма управления
+очередью RED</p>
+  <p class="author">Горяйнова АА</p>
   <p class="institute">Российский университет дружбы народов, Москва,
 Россия</p>
 </section>
@@ -50,33 +51,28 @@
 <div class="columns" data-align="center">
 <div class="column" style="width:70%;">
 <ul>
-<li>Беличева Дарья Михайловна</li>
+<li>Горяйнова Алёна Андреевна</li>
 <li>студентка</li>
 <li>Российский университет дружбы народов</li>
-<li><a href="mailto:1032216453@pfur.ru">1032216453@pfur.ru</a></li>
-<li><a href="https://dmbelicheva.github.io/ru/"
-class="uri">https://dmbelicheva.github.io/ru/</a></li>
 </ul>
 </div><div class="column" style="width:25%;">
-<p><img data-src="./image/belicheva.jpg" /></p>
+
 </div>
 </div>
 </section>
 <section id="цель-работы" class="slide level2">
 <h2>Цель работы</h2>
-<p>Приобрести навыки моделирования сетей передачи данных с помощью
-средства имитационного моделирования NS-2, а также проанализировать
-полученные результаты моделирования.</p>
+<p>Исследовать протокол TCP и алгоритм управления очередью RED..</p>
 </section>
 <section id="задание" class="slide level2">
 <h2>Задание</h2>
 <ol type="1">
-<li>Создать шаблон сценария для NS-2;</li>
-<li>Выполнить простой пример описания топологии сети, состоящей из двух
-узлов и одного соединения;</li>
-<li>Выполнить пример с усложнённой топологией сети;</li>
-<li>Выполнить пример с кольцевой топологией сети;</li>
-<li>Выполнить упражнение.</li>
+<li>Выполнить пример с дисциплиной RED;</li>
+<li>Изменить в модели на узле s1 тип протокола TCP с Reno на NewReno,
+затем на Vegas. Сравнить и пояснить результаты;</li>
+<li>Внести изменения при отображении окон с графиками (изменить цвет
+фона, цвет траекторий, подписи к осям, подпись траектории в
+легенде).</li>
 </ol>
 </section></section>
 <section>
@@ -85,182 +81,40 @@ class="title-slide slide level1">
 <h1>Выполнение лабораторной работы</h1>
 
 </section>
-<section id="шаблон-сценария-для-ns-2" class="slide level2">
-<h2>Шаблон сценария для NS-2</h2>
+<section
+id="изменение-в-модели-на-узле-s1-тип-протокола-tcp-с-reno-на-newreno"
+class="slide level2">
+<h2>Изменение в модели на узле s1 тип протокола TCP с Reno на
+NewReno</h2>
 <figure>
 <img data-src="image/1.png" id="fig:001" style="width:70.0%"
-alt="Создание директорий и файла" />
-<figcaption aria-hidden="true">Создание директорий и файла</figcaption>
-</figure>
-</section>
-<section id="шаблон-сценария-для-ns-2-1" class="slide level2">
-<h2>Шаблон сценария для NS-2</h2>
-<figure>
-<img data-src="image/2.png" id="fig:002" style="width:40.0%"
-alt="Редактирование файла shablon.tcl" />
-<figcaption aria-hidden="true">Редактирование файла
-shablon.tcl</figcaption>
-</figure>
-</section>
-<section id="шаблон-сценария-для-ns-2-2" class="slide level2">
-<h2>Шаблон сценария для NS-2</h2>
-<figure>
-<img data-src="image/3.png" id="fig:003" style="width:50.0%"
-alt="Запуск шаблона сценария для NS-2" />
-<figcaption aria-hidden="true">Запуск шаблона сценария для
-NS-2</figcaption>
+alt="NewReno" />
+<figcaption aria-hidden="true">NewReno</figcaption>
 </figure>
 </section>
 <section
-id="простой-пример-описания-топологии-сети-состоящей-из-двух-узлов-и-одного-соединения"
+id="измените-в-модели-на-узле-s1-тип-протокола-tcp-с-reno-на-vegas-и-изменение-цвета-фона-линий-и-текста"
 class="slide level2">
-<h2>Простой пример описания топологии сети, состоящей из двух узлов и
-одного соединения</h2>
+<h2>Измените в модели на узле s1 тип протокола TCP с Reno на Vegas и
+изменение цвета фона, линий и текста</h2>
 <figure>
-<img data-src="image/4.png" id="fig:004" style="width:40.0%"
-alt="Пример описания топологии сети, состоящей из двух узлов и одного соединения" />
-<figcaption aria-hidden="true">Пример описания топологии сети, состоящей
-из двух узлов и одного соединения</figcaption>
+<img data-src="image/2.png" id="fig:002" style="width:70.0%"
+alt="Vegas" />
+<figcaption aria-hidden="true">Vegas</figcaption>
 </figure>
 </section>
-<section
-id="простой-пример-описания-топологии-сети-состоящей-из-двух-узлов-и-одного-соединения-1"
-class="slide level2">
-<h2>Простой пример описания топологии сети, состоящей из двух узлов и
-одного соединения</h2>
+<section id="сравнение-всех-трёх-моделей" class="slide level2">
+<h2>Сравнение всех трёх моделей</h2>
 <figure>
-<img data-src="image/5.png" id="fig:005" style="width:50.0%"
-alt="Визуализация простой модели сети с помощью nam" />
-<figcaption aria-hidden="true">Визуализация простой модели сети с
-помощью nam</figcaption>
-</figure>
-</section>
-<section id="пример-с-усложнённой-топологией-сети" class="slide level2">
-<h2>Пример с усложнённой топологией сети</h2>
-<figure>
-<img data-src="image/6.png" id="fig:006" style="width:70.0%"
-alt="Визуализация простой модели сети с помощью nam" />
-<figcaption aria-hidden="true">Визуализация простой модели сети с
-помощью nam</figcaption>
-</figure>
-</section>
-<section id="пример-с-усложнённой-топологией-сети-1"
-class="slide level2">
-<h2>Пример с усложнённой топологией сети</h2>
-<figure>
-<img data-src="image/7.png" id="fig:007" style="width:50.0%"
-alt="Описание усложненной топологии сети" />
-<figcaption aria-hidden="true">Описание усложненной топологии
-сети</figcaption>
-</figure>
-</section>
-<section id="пример-с-усложнённой-топологией-сети-2"
-class="slide level2">
-<h2>Пример с усложнённой топологией сети</h2>
-<figure>
-<img data-src="image/8.png" id="fig:008" style="width:50.0%"
-alt="Описание усложненной топологии сети" />
-<figcaption aria-hidden="true">Описание усложненной топологии
-сети</figcaption>
-</figure>
-</section>
-<section id="пример-с-усложнённой-топологией-сети-3"
-class="slide level2">
-<h2>Пример с усложнённой топологией сети</h2>
-<figure>
-<img data-src="image/9.png" id="fig:009" style="width:50.0%"
-alt="Описание усложненной топологии сети" />
-<figcaption aria-hidden="true">Описание усложненной топологии
-сети</figcaption>
-</figure>
-</section>
-<section id="пример-с-кольцевой-топологией-сети" class="slide level2">
-<h2>Пример с кольцевой топологией сети</h2>
-<figure>
-<img data-src="image/9.1.png" id="fig:010" style="width:50.0%"
-alt="Описание кольцевой топологии сети и динамической маршрутизацией пакетов" />
-<figcaption aria-hidden="true">Описание кольцевой топологии сети и
-динамической маршрутизацией пакетов</figcaption>
-</figure>
-</section>
-<section id="пример-с-кольцевой-топологией-сети-1" class="slide level2">
-<h2>Пример с кольцевой топологией сети</h2>
-<figure>
-<img data-src="image/10.png" id="fig:011" style="width:50.0%"
-alt="Передача данных по кратчайшему пути сети с кольцевой топологией" />
-<figcaption aria-hidden="true">Передача данных по кратчайшему пути сети
-с кольцевой топологией</figcaption>
-</figure>
-</section>
-<section id="пример-с-кольцевой-топологией-сети-2" class="slide level2">
-<h2>Пример с кольцевой топологией сети</h2>
-<figure>
-<img data-src="image/11.png" id="fig:012" style="width:50.0%"
-alt="Передача данных по сети с кольцевой топологией в случае разрыва соединения" />
-<figcaption aria-hidden="true">Передача данных по сети с кольцевой
-топологией в случае разрыва соединения</figcaption>
-</figure>
-</section>
-<section id="пример-с-кольцевой-топологией-сети-3" class="slide level2">
-<h2>Пример с кольцевой топологией сети</h2>
-<p>Добавив в начало скрипта после команды создания объекта
-Simulator:</p>
-<p><code>$ns rtproto DV</code></p>
-<p>увидим, что сразу после запуска в сети отправляется небольшое
-количество маленьких пакетов, используемых для обмена информацией,
-необходимой для маршрутизации между узлами.</p>
-</section>
-<section id="пример-с-кольцевой-топологией-сети-4" class="slide level2">
-<h2>Пример с кольцевой топологией сети</h2>
-<figure>
-<img data-src="image/12.png" id="fig:013" style="width:50.0%"
-alt="Маршрутизация данных по сети с кольцевой топологией в случае разрыва соединения" />
-<figcaption aria-hidden="true">Маршрутизация данных по сети с кольцевой
-топологией в случае разрыва соединения</figcaption>
-</figure>
-</section>
-<section id="упражнение" class="slide level2">
-<h2>Упражнение</h2>
-<figure>
-<img data-src="image/13.png" id="fig:014" style="width:50.0%"
-alt="Программа для упражнения по построению топологии сети" />
-<figcaption aria-hidden="true">Программа для упражнения по построению
-топологии сети</figcaption>
-</figure>
-</section>
-<section id="упражнение-1" class="slide level2">
-<h2>Упражнение</h2>
-<figure>
-<img data-src="image/14.png" id="fig:015" style="width:50.0%"
-alt="Передача данных по изменённой кольцевой топологии сети" />
-<figcaption aria-hidden="true">Передача данных по изменённой кольцевой
-топологии сети</figcaption>
-</figure>
-</section>
-<section id="упражнение-2" class="slide level2">
-<h2>Упражнение</h2>
-<figure>
-<img data-src="image/15.png" id="fig:016" style="width:50.0%"
-alt="Передача данных по сети в случае разрыва соединения" />
-<figcaption aria-hidden="true">Передача данных по сети в случае разрыва
-соединения</figcaption>
-</figure>
-</section>
-<section id="упражнение-3" class="slide level2">
-<h2>Упражнение</h2>
-<figure>
-<img data-src="image/16.png" id="fig:017" style="width:50.0%"
-alt="Передача данных после восстановления соединения" />
-<figcaption aria-hidden="true">Передача данных после восстановления
-соединения</figcaption>
+<img data-src="image/3.png" id="fig:003" style="width:70.0%"
+alt="все 3 варианта" />
+<figcaption aria-hidden="true">все 3 варианта</figcaption>
 </figure>
 </section>
 <section id="выводы" class="slide level2">
 <h2>Выводы</h2>
-<p>В процессе выполнения данной лабораторной работы я приобрела навыки
-моделирования сетей передачи данных с помощью средства имитационного
-моделирования NS-2, а также проанализировала полученные результаты
-моделирования.</p>
+<p>В процессе выполнения данной лабораторной работы я исследовала
+протокол TCP и алгоритм управления очередью RED.</p>
 </section></section>
     </div>
   </div>
